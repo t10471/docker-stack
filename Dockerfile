@@ -23,3 +23,7 @@ RUN stack install cabal-install \
                   pandoc    \
                   stylish-haskell \
                   --install-ghc
+
+RUN echo 'export PATH=$PATH:"/root/.local/bin"' >> /root/.bashrc
+
+RUN apt-get install -y libpcre3-dev 
